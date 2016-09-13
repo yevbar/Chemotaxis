@@ -1,8 +1,6 @@
-//TODO @ 49
 Bacteria[] swarm;
 int swarmSize = 100;
 int r,g,b;
-//declare bacteria variables here   
 void setup()   
 {     
 	size (750,750);
@@ -15,7 +13,7 @@ void setup()
 	b = (int)(Math.random()*256);
 	frameRate(30);
 	draw();
-}   
+} 
 void draw()   
 {
 	background(128); 
@@ -47,7 +45,6 @@ class Bacteria
 		{
 			int xChange = 0;
 			int yChange = 0;
-			//TODO - edit so that bacteria don't fly off screen
 			boolean notDone = true;
 			while (1!=0)
 			{
@@ -68,9 +65,18 @@ class Bacteria
 		ellipse(X,Y,20,20);
 	}
 }
-/*
 
-bacteria randomly move in any direction
-if bacteria is within k units of the mouse, it moves directly away from the mouse (well, cursor, but you get what I'm saying)
-whenever mouse is pressed, bacteria change color
-*/
+void mousePressed ()
+{
+	r = (int)(Math.random()*255);
+	g = (int)(Math.random()*255);
+	b = (int)(Math.random()*255);
+}
+
+void keyPressed ()
+{
+	if (key == 32)
+	{
+
+	}
+}
