@@ -3,7 +3,7 @@ int swarmSize = 100;
 int r,g,b;
 void setup()   
 {     
-	size (750,750);
+	size (750,500);
 	background(128);
 	initialize();
 	frameRate(30);
@@ -36,7 +36,7 @@ class Bacteria
 	Bacteria()
 	{
 		X = (int)(Math.random()*750);
-		Y = (int)(Math.random()*750);
+		Y = (int)(Math.random()*500);
 	}
 	void move()
 	{
@@ -59,7 +59,7 @@ class Bacteria
 			while (1!=0)
 			{
 				yChange = (int)(Math.random()*20)-10;
-				if (Y+yChange > 0 && Y+yChange < 750)
+				if (Y+yChange > 0 && Y+yChange < 500)
 					break;
 			}
 			X+=xChange;
