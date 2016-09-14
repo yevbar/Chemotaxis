@@ -5,18 +5,22 @@ void setup()
 {     
 	size (750,750);
 	background(128);
+	initialize();
+	frameRate(30);
+	draw();
+}
+void initialize ()
+{
 	swarm = new Bacteria[swarmSize];
 	for (int i = 0; i < swarmSize; i++)
 		swarm[i] = new Bacteria();
 	r = (int)(Math.random()*256);
 	g = (int)(Math.random()*256);
 	b = (int)(Math.random()*256);
-	frameRate(30);
-	draw();
-} 
+}
 void draw()   
 {
-	background(128); 
+	//background(128); 
 	for (int i = 0; i < swarmSize; i++)
 		swarm[i].move();
 }
@@ -76,7 +80,7 @@ void mousePressed ()
 void keyPressed ()
 {
 	if (key == 32)
-	{
-
-	}
+		initialize();
+	if (key == 13)
+		background(128);
 }
