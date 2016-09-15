@@ -52,13 +52,13 @@ class Bacteria
 			boolean notDone = true;
 			while (1!=0)
 			{
-				xChange = (int)(Math.random()*20)-10;
+				xChange = (int)(Math.random()*21)-10;
 				if (X+xChange > 0 && X+xChange < 750)
 					break;
 			}
 			while (1!=0)
 			{
-				yChange = (int)(Math.random()*20)-10;
+				yChange = (int)(Math.random()*21)-10;
 				if (Y+yChange > 0 && Y+yChange < 500)
 					break;
 			}
@@ -73,6 +73,7 @@ class Bacteria
 void mousePressed ()
 {
 	background(128);
+	initialize();
 }
 
 void keyPressed ()
