@@ -72,15 +72,11 @@ class Bacteria
 
 void mousePressed ()
 {
-	r = (int)(Math.random()*255);
-	g = (int)(Math.random()*255);
-	b = (int)(Math.random()*255);
+	background(128);
 }
 
 void keyPressed ()
 {
 	if (key == 32)
 		initialize();
-	if (key == 13)
-		background(128);
 }
