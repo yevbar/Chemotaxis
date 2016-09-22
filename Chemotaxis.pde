@@ -14,9 +14,6 @@ void initialize ()
 	swarm = new Bacteria[swarmSize];
 	for (int i = 0; i < swarmSize; i++)
 		swarm[i] = new Bacteria();
-	r = (int)(Math.random()*256);
-	g = (int)(Math.random()*256);
-	b = (int)(Math.random()*256);
 }
 void draw()   
 {
@@ -33,13 +30,20 @@ int distance (int x1,int y1,int x2,int y2)
 class Bacteria    
 {     
 	int X,Y;
+	int r,g,b;
 	Bacteria()
 	{
 		X = (int)(Math.random()*750);
 		Y = (int)(Math.random()*500);
+		r = (int)(Math.random()*256);
+		g = (int)(Math.random()*256);
+		b = (int)(Math.random()*256);
 	}
 	void move()
 	{
+		X-=(X-mouseX)/15;
+		Y-=(Y-mouseY)/15;
+		/*
 		if (distance(X,Y,mouseX,mouseY) < 30)
 		{
 			X-=(X-mouseX);
@@ -65,15 +69,10 @@ class Bacteria
 			X+=xChange;
 			Y+=yChange;
 		}
+		*/
 		fill(r,g,b);
 		ellipse(X,Y,20,20);
 	}
-}
-
-void mousePressed ()
-{
-	background(128);
-	initialize();
 }
 
 void keyPressed ()
