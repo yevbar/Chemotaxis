@@ -5,11 +5,11 @@ void setup()
 {     
 	size (750,500);
 	background(128);
-	initialize();
+	swarmInitialize();
 	frameRate(30);
 	draw();
 }
-void initialize ()
+void swarmInitialize ()
 {
 	swarm = new Bacteria[swarmSize];
 	for (int i = 0; i < swarmSize; i++)
@@ -78,5 +78,5 @@ class Bacteria
 void keyPressed ()
 {
 	if (key == 32)
-		initialize();
+		swarmInitialize();
 }
